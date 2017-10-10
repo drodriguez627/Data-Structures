@@ -21,9 +21,6 @@ public class Graph {
 
     /**
      * Constructs a graph out of a plain text description in an input file.
-     * 
-     * @param file Name of the file that has the input graph description.
-     * @throws IOException If the input file is not found.
      */
     public Graph(String file) 
     throws IOException {
