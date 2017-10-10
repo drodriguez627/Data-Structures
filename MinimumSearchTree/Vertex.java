@@ -29,9 +29,6 @@ public class Vertex {
 
 	    /**
 	     * Initializes a new Neighbor object.
-	     * 
-	     * @param vertex Neighbor vertex
-	     * @param weight Weight of edge to neighbor.
 	     */
 	    Neighbor(Vertex vertex, int weight) {
 	    	this.vertex = vertex;
@@ -63,7 +60,6 @@ public class Vertex {
      * Constructs a new Vertex object with no neighbors (i.e.,
      * no outgoing edges), and no parent vertex (i.e., it is its own partial
      * spanning tree).
-     * @param name Name to give to this vertex.
      */
     Vertex(String name) {
     	this.name = name;
@@ -74,7 +70,6 @@ public class Vertex {
     /**
      * Finds and returns the vertex at the root of the partial spanning tree to
      * which this vertex belongs.
-     * @return Root of partial tree.
      */
     public Vertex getRoot() {
 		Vertex v;
@@ -82,9 +77,6 @@ public class Vertex {
 		return v;
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
     public String toString() {
     	return name;
     }
