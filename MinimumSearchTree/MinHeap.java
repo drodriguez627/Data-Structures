@@ -21,8 +21,6 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
     /**
      * Copy constructor: initializes the items in this min heap by copying
      * all the items in the other heap
-     * 
-     * @param other Other min heap from which items are copied to this
      */
     public MinHeap(MinHeap<T> other) {
     	items = new ArrayList<T>(other.size());
@@ -33,8 +31,6 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
     
     /**
      * Constructs a new, empty heap with the specified initial capacity.
-     *
-     * @param cap Initial capacity of the heap.
      */
     public MinHeap(int cap) {
     	items = new ArrayList<T>(cap);
@@ -78,8 +74,6 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
     
     /**
      * Inserts an item into the heap.
-     * 
-     * @param item Item to insert.
      */
     public void insert(T item) {
     	items.add(item);
@@ -87,10 +81,7 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
     }
 
     /**
-     * Removes and returns the min item in the heap.
-     * 
-     * @return Item (min) at top of heap.
-     * @throws NoSuchElementException If the heap is empty.
+     * Removes and returns the min item in the heap.y.
      */
     public T deleteMin() 
     throws NoSuchElementException {
@@ -113,8 +104,6 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
     /**
      * Merges another heap into this one (i.e., all items in the other heap
      * are added to this one).
-     * 
-     * @param hp Heap whose elements will be merged into this heap.
      */
     public void merge(MinHeap<T> hp) {
     	// first merge the argument heap's entries into this
@@ -132,9 +121,6 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
     
     /**
      * Returns (but does not remove) the min item in the heap.
-     * 
-     * @return Item at top of heap.
-     * @throws NoSuchElementExcepton If heap is empty.
      */
     public T getMin() 
     throws NoSuchElementException {
@@ -146,8 +132,6 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
 
     /**
      * Returns the number of items currently stored in the heap.
-     * 
-     * @return Size of heap.
      */
     public int size() {
     	return items.size();
@@ -155,8 +139,6 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
 
     /**
      * Tells if the heap is empty. 
-     * 
-     * @return <tt>true</tt> if no items are in heap, <tt>false</tt> otherwise.
      */
     public boolean isEmpty() {
     	return items.isEmpty();
